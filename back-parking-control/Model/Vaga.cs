@@ -1,7 +1,7 @@
 ﻿
 namespace back_parking_control.Model;
 
-internal class Vaga
+public class Vaga
 {
     private int _id;
     private string _numeroVaga;
