@@ -1,8 +1,12 @@
-﻿// Target framework for the code: .NET 9.0
+﻿
+using back_parking_control.Data;
+
+namespace backUrbanPark;
+
 public class Program
 {
     public static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        Banco.TestarConexao();
     }
 }
