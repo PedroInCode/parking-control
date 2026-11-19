@@ -12,9 +12,18 @@ public class VagaRepository
     /// </summary>
     /// <param name="vaga"></param>
     /// <returns></returns>
-    public static int Inserir(Vaga vaga)
+    public int Inserir(Vaga vaga)
     {
-        return 1;
+        using (var cmd = new MySqlCommand("sp_inserirVaga"))
+        {
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@p_numero_vaga", vaga.NumeroVaga);
+            cmd.Parameters.AddWithValue("@p_tipo", vaga.TipoVaga.ToString());
+            cmd.Parameters.AddWithValue("@p_status", vaga.StatusVaga.ToString());
+
+            return Banco.ExecutarComando(cmd);
+        }
     }
 
     /// <summary>
