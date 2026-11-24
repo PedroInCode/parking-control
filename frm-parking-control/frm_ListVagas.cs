@@ -16,5 +16,10 @@ namespace frm_parking_control
         {
             InitializeComponent();
         }
+
+        private void frm_ListVagas_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

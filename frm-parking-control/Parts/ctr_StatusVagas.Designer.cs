@@ -28,51 +28,54 @@
         /// </summary>
         private void InitializeComponent()
         {
-            pic_VagaDisponivel = new PictureBox();
-            lbl_StatusVaga = new Label();
-            ((System.ComponentModel.ISupportInitialize)pic_VagaDisponivel).BeginInit();
+            pic_VagaStatus = new PictureBox();
+            lbl_NumeroVaga = new Label();
+            ((System.ComponentModel.ISupportInitialize)pic_VagaStatus).BeginInit();
             SuspendLayout();
             // 
-            // pic_VagaDisponivel
+            // pic_VagaStatus
             // 
-            pic_VagaDisponivel.Image = Properties.Resources.carIconVerde;
-            pic_VagaDisponivel.Location = new Point(47, 66);
-            pic_VagaDisponivel.Margin = new Padding(4, 4, 4, 4);
-            pic_VagaDisponivel.Name = "pic_VagaDisponivel";
-            pic_VagaDisponivel.Size = new Size(50, 50);
-            pic_VagaDisponivel.SizeMode = PictureBoxSizeMode.StretchImage;
-            pic_VagaDisponivel.TabIndex = 0;
-            pic_VagaDisponivel.TabStop = false;
+            pic_VagaStatus.Image = Properties.Resources.carIconVerde;
+            pic_VagaStatus.Location = new Point(43, 63);
+            pic_VagaStatus.Margin = new Padding(4);
+            pic_VagaStatus.Name = "pic_VagaStatus";
+            pic_VagaStatus.Size = new Size(61, 59);
+            pic_VagaStatus.SizeMode = PictureBoxSizeMode.StretchImage;
+            pic_VagaStatus.TabIndex = 0;
+            pic_VagaStatus.TabStop = false;
             // 
-            // lbl_StatusVaga
+            // lbl_NumeroVaga
             // 
-            lbl_StatusVaga.AutoSize = true;
-            lbl_StatusVaga.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbl_StatusVaga.Location = new Point(44, 38);
-            lbl_StatusVaga.Margin = new Padding(4, 0, 4, 0);
-            lbl_StatusVaga.Name = "lbl_StatusVaga";
-            lbl_StatusVaga.Size = new Size(57, 19);
-            lbl_StatusVaga.TabIndex = 1;
-            lbl_StatusVaga.Text = "LIVRE";
+            lbl_NumeroVaga.AutoSize = true;
+            lbl_NumeroVaga.Font = new Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbl_NumeroVaga.Location = new Point(51, 27);
+            lbl_NumeroVaga.Margin = new Padding(4, 0, 4, 0);
+            lbl_NumeroVaga.Name = "lbl_NumeroVaga";
+            lbl_NumeroVaga.Size = new Size(44, 32);
+            lbl_NumeroVaga.TabIndex = 1;
+            lbl_NumeroVaga.Text = "01";
             // 
             // ctr_StatusVagas
             // 
             AutoScaleDimensions = new SizeF(9F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(223, 247, 231);
-            Controls.Add(lbl_StatusVaga);
-            Controls.Add(pic_VagaDisponivel);
+            BorderStyle = BorderStyle.FixedSingle;
+            Controls.Add(lbl_NumeroVaga);
+            Controls.Add(pic_VagaStatus);
             Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "ctr_StatusVagas";
-            ((System.ComponentModel.ISupportInitialize)pic_VagaDisponivel).EndInit();
+            Size = new Size(148, 148);
+            Load += ctr_StatusVagas_Load;
+            ((System.ComponentModel.ISupportInitialize)pic_VagaStatus).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private PictureBox pic_VagaDisponivel;
-        private Label lbl_StatusVaga;
+        private PictureBox pic_VagaStatus;
+        private Label lbl_NumeroVaga;
     }
 }
