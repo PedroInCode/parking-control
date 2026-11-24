@@ -17,16 +17,6 @@ public class Program
         //Console.WriteLine($"Tipo: {vaga1.TipoVaga}");
         //Console.WriteLine($"Status: {vaga1.StatusVaga}");
 
-        VagaRepository repositories = new VagaRepository();
-        IEnumerable<Vaga> vagas = repositories.BuscarTodas();
-
-        foreach(var vaga in vagas)
-        {
-            Console.WriteLine($"ID: {vaga.Id}");
-            Console.WriteLine($"Número: {vaga.NumeroVaga}");
-            Console.WriteLine($"Tipo: {vaga.TipoVaga}");
-            Console.WriteLine($"Status: {vaga.StatusVaga}");
-            Console.WriteLine("------------------------------");
-        }
+        
     }
 }

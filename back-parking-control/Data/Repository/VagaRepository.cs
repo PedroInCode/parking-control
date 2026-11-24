@@ -5,14 +5,14 @@ using System.Data;
 
 namespace back_parking_control.Data.Repository;
 
-public class VagaRepository
+public static class VagaRepository
 {
     /// <summary>
     /// Insere uma vaga no banco de dados
     /// </summary>
     /// <param name="vaga"></param>
     /// <returns></returns>
-    public int Inserir(Vaga vaga)
+    public static int Inserir(Vaga vaga)
     {
         using (var cmd = new MySqlCommand("sp_inserirVaga"))
         {
@@ -31,7 +31,7 @@ public class VagaRepository
     /// </summary>
     /// <param name="id"></param>
     /// <returns></returns>
-    public Vaga? BuscarPorId(int id)
+    public static Vaga? BuscarPorId(int id)
     {
         using (var cmd = new MySqlCommand("sp_buscarVagaPorId"))
         {
@@ -55,7 +55,7 @@ public class VagaRepository
     /// </summary>
     /// <param name="id"></param>
     /// <returns></returns>
-    public IEnumerable<Vaga> BuscarTodas()
+    public static IEnumerable<Vaga> BuscarTodas()
     {
         List<Vaga> vagas = new List<Vaga>();
 
@@ -75,12 +75,12 @@ public class VagaRepository
         return vagas;
     }
 
-    private Vaga MapearVaga(MySqlDataReader reader)
+    private static Vaga MapearVaga(MySqlDataReader reader)
     {
         int id_vaga = reader.GetInt32("id_vaga");
         int numero_vaga = reader.GetInt32("numero_vaga");
         TipoVaga tipoVaga = Enum.Parse<TipoVaga>(reader.GetString("tipo"));
-        StatusVaga statusVaga = Enum.Parse<StatusVaga>(reader.GetString("status"));
+        EStatusVagas statusVaga = Enum.Parse<EStatusVagas>(reader.GetString("status"));
 
         return new Vaga(id_vaga, numero_vaga, tipoVaga, statusVaga);
     }

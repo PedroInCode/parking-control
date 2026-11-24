@@ -28,13 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            flw_CardVagas = new FlowLayoutPanel();
             SuspendLayout();
+            // 
+            // flw_CardVagas
+            // 
+            flw_CardVagas.Dock = DockStyle.Fill;
+            flw_CardVagas.Location = new Point(0, 0);
+            flw_CardVagas.Name = "flw_CardVagas";
+            flw_CardVagas.Size = new Size(800, 450);
+            flw_CardVagas.TabIndex = 0;
             // 
             // frm_ListVagas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(flw_CardVagas);
             Name = "frm_ListVagas";
             Text = "frm_ListVagas";
             Load += frm_ListVagas_Load;
@@ -42,5 +52,7 @@
         }
 
         #endregion
+
+        private FlowLayoutPanel flw_CardVagas;
     }
 }

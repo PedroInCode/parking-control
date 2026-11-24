@@ -9,7 +9,7 @@ public enum TipoVaga
     Idoso
 }
 
-public enum StatusVaga
+public enum EStatusVagas
 {
     Livre,
     Ocupada
