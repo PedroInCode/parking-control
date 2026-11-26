@@ -37,7 +37,7 @@ namespace frm_parking_control
                 string strNumeroVaga = vaga.NumeroVaga.ToString();
                 EStatusVagas statusVaga = Enum.Parse<EStatusVagas>(vaga.StatusVaga.ToString());
                 int idVaga = vaga.Id;
-                TipoVaga tipoVaga = Enum.Parse<TipoVaga>(vaga.TipoVaga.ToString());
+                ETipoVagas tipoVaga = Enum.Parse<ETipoVagas>(vaga.TipoVaga.ToString());
                 
                 ctr_StatusVagas cardVaga = new();
 
@@ -46,8 +46,17 @@ namespace frm_parking_control
                 cardVaga.NumVaga = strNumeroVaga;
                 cardVaga.TipoVaga = tipoVaga;
 
+                cardVaga.CardClicado += cardVaga_Click;
+
                 flw_CardVagas.Controls.Add(cardVaga);
             }
+        }
+
+        public void cardVaga_Click(object sender, EventArgs e)
+        {
+            ctr_StatusVagas cardSelecionado = (ctr_StatusVagas)sender;
+
+            MessageBox.Show($"Vaga:{cardSelecionado.NumVaga} - Status: {cardSelecionado.StatusVaga}");
         }
     }
 }

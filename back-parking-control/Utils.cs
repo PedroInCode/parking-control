@@ -1,7 +1,7 @@
 ﻿
 namespace back_parking_control;
 
-public enum TipoVaga
+public enum ETipoVagas
 {
     Carro,
     Moto,

@@ -79,7 +79,7 @@ public static class VagaRepository
     {
         int id_vaga = reader.GetInt32("id_vaga");
         int numero_vaga = reader.GetInt32("numero_vaga");
-        TipoVaga tipoVaga = Enum.Parse<TipoVaga>(reader.GetString("tipo"));
+        ETipoVagas tipoVaga = Enum.Parse<ETipoVagas>(reader.GetString("tipo"));
         EStatusVagas statusVaga = Enum.Parse<EStatusVagas>(reader.GetString("status"));
 
         return new Vaga(id_vaga, numero_vaga, tipoVaga, statusVaga);
