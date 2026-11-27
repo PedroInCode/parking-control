@@ -10,6 +10,12 @@ namespace frm_parking_control
             InitializeComponent();
         }
 
+        public frm_RegistrarEntrada(string numVaga, int idVaga) : this() 
+        {
+            this.numVaga = numVaga;
+            this.idVaga = idVaga;
+        }
+
         private void frm_RegistrarEntrada_Load(object sender, EventArgs e)
         {
             
