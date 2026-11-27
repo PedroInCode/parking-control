@@ -29,35 +29,35 @@
         private void InitializeComponent()
         {
             pnlCabecalho = new Panel();
+            lbl_Subtitulo2 = new Label();
+            lblSubtitulo = new Label();
+            lblTitulo = new Label();
+            picLogo = new PictureBox();
             grpBuscarVeiculo = new GroupBox();
+            btnBuscarPorPlaca = new Button();
+            mskPlacaveiculo = new MaskedTextBox();
             lblPlacaVeiculo = new Label();
             grpDadosVeiculo = new GroupBox();
-            gpb_Movimentacao = new GroupBox();
-            panel2 = new Panel();
-            mskPlacaveiculo = new MaskedTextBox();
-            btnBuscarPorPlaca = new Button();
-            lblCliente = new Label();
-            lblCorModelo = new Label();
-            txtNomeCliente = new TextBox();
             textBox2 = new TextBox();
-            lblVagaSelecionada = new Label();
-            lblDataEntrada = new Label();
-            txtVagaSelecionada = new TextBox();
-            lblHoraEntrada = new Label();
-            dtInfoDtEntrada = new DateTimePicker();
+            txtNomeCliente = new TextBox();
+            lblCorModelo = new Label();
+            lblCliente = new Label();
+            gpb_Movimentacao = new GroupBox();
             dtInfoHrEntrada = new DateTimePicker();
-            btnRegistrarEntrada = new Button();
+            dtInfoDtEntrada = new DateTimePicker();
+            lblHoraEntrada = new Label();
+            txtVagaSelecionada = new TextBox();
+            lblDataEntrada = new Label();
+            lblVagaSelecionada = new Label();
+            panel2 = new Panel();
             btnCancelar = new Button();
-            picLogo = new PictureBox();
-            lblTitulo = new Label();
-            lblSubtitulo = new Label();
-            lbl_Subtitulo2 = new Label();
+            btnRegistrarEntrada = new Button();
             pnlCabecalho.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)picLogo).BeginInit();
             grpBuscarVeiculo.SuspendLayout();
             grpDadosVeiculo.SuspendLayout();
             gpb_Movimentacao.SuspendLayout();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)picLogo).BeginInit();
             SuspendLayout();
             // 
             // pnlCabecalho
@@ -72,7 +72,51 @@
             pnlCabecalho.Name = "pnlCabecalho";
             pnlCabecalho.Size = new Size(1050, 95);
             pnlCabecalho.TabIndex = 0;
-            pnlCabecalho.Paint += this.pnlCabecalho_Paint;
+            // 
+            // lbl_Subtitulo2
+            // 
+            lbl_Subtitulo2.AutoSize = true;
+            lbl_Subtitulo2.Font = new Font("Arial", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbl_Subtitulo2.ForeColor = Color.White;
+            lbl_Subtitulo2.Location = new Point(420, 51);
+            lbl_Subtitulo2.Name = "lbl_Subtitulo2";
+            lbl_Subtitulo2.Size = new Size(322, 24);
+            lbl_Subtitulo2.TabIndex = 3;
+            lbl_Subtitulo2.Text = "Inicia a movimentação do veículo";
+            // 
+            // lblSubtitulo
+            // 
+            lblSubtitulo.AutoSize = true;
+            lblSubtitulo.Font = new Font("Arial Narrow", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSubtitulo.ForeColor = Color.White;
+            lblSubtitulo.Location = new Point(420, 19);
+            lblSubtitulo.Name = "lblSubtitulo";
+            lblSubtitulo.Size = new Size(215, 33);
+            lblSubtitulo.TabIndex = 2;
+            lblSubtitulo.Text = "Registrar Entrada";
+            // 
+            // lblTitulo
+            // 
+            lblTitulo.AutoSize = true;
+            lblTitulo.BackColor = Color.Transparent;
+            lblTitulo.Font = new Font("Arial", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitulo.ForeColor = Color.White;
+            lblTitulo.Location = new Point(120, 19);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(294, 56);
+            lblTitulo.TabIndex = 1;
+            lblTitulo.Text = "UrbanPark |";
+            // 
+            // picLogo
+            // 
+            picLogo.BackColor = Color.Transparent;
+            picLogo.Image = Properties.Resources.iconePark;
+            picLogo.Location = new Point(14, 0);
+            picLogo.Name = "picLogo";
+            picLogo.Size = new Size(100, 95);
+            picLogo.SizeMode = PictureBoxSizeMode.StretchImage;
+            picLogo.TabIndex = 0;
+            picLogo.TabStop = false;
             // 
             // grpBuscarVeiculo
             // 
@@ -87,6 +131,29 @@
             grpBuscarVeiculo.TabIndex = 1;
             grpBuscarVeiculo.TabStop = false;
             grpBuscarVeiculo.Text = "Buscar Veículo";
+            // 
+            // btnBuscarPorPlaca
+            // 
+            btnBuscarPorPlaca.BackColor = Color.FromArgb(5, 31, 71);
+            btnBuscarPorPlaca.FlatAppearance.BorderColor = Color.Silver;
+            btnBuscarPorPlaca.FlatStyle = FlatStyle.Flat;
+            btnBuscarPorPlaca.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnBuscarPorPlaca.ForeColor = Color.White;
+            btnBuscarPorPlaca.Location = new Point(355, 53);
+            btnBuscarPorPlaca.Name = "btnBuscarPorPlaca";
+            btnBuscarPorPlaca.Size = new Size(194, 33);
+            btnBuscarPorPlaca.TabIndex = 2;
+            btnBuscarPorPlaca.Text = "🔍 Buscar por Placa";
+            btnBuscarPorPlaca.UseVisualStyleBackColor = false;
+            // 
+            // mskPlacaveiculo
+            // 
+            mskPlacaveiculo.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            mskPlacaveiculo.Location = new Point(230, 55);
+            mskPlacaveiculo.Mask = "AAC-0000";
+            mskPlacaveiculo.Name = "mskPlacaveiculo";
+            mskPlacaveiculo.Size = new Size(103, 29);
+            mskPlacaveiculo.TabIndex = 1;
             // 
             // lblPlacaVeiculo
             // 
@@ -114,6 +181,44 @@
             grpDadosVeiculo.TabStop = false;
             grpDadosVeiculo.Text = "Dados do Veículo";
             // 
+            // textBox2
+            // 
+            textBox2.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox2.Location = new Point(187, 82);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(213, 29);
+            textBox2.TabIndex = 4;
+            // 
+            // txtNomeCliente
+            // 
+            txtNomeCliente.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtNomeCliente.Location = new Point(187, 42);
+            txtNomeCliente.Name = "txtNomeCliente";
+            txtNomeCliente.Size = new Size(213, 29);
+            txtNomeCliente.TabIndex = 3;
+            // 
+            // lblCorModelo
+            // 
+            lblCorModelo.AutoSize = true;
+            lblCorModelo.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblCorModelo.ForeColor = Color.Black;
+            lblCorModelo.Location = new Point(57, 85);
+            lblCorModelo.Name = "lblCorModelo";
+            lblCorModelo.Size = new Size(124, 22);
+            lblCorModelo.TabIndex = 2;
+            lblCorModelo.Text = "Cor / Modelo:";
+            // 
+            // lblCliente
+            // 
+            lblCliente.AutoSize = true;
+            lblCliente.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblCliente.ForeColor = Color.Black;
+            lblCliente.Location = new Point(57, 45);
+            lblCliente.Name = "lblCliente";
+            lblCliente.Size = new Size(74, 22);
+            lblCliente.TabIndex = 0;
+            lblCliente.Text = "Cliente:";
+            // 
             // gpb_Movimentacao
             // 
             gpb_Movimentacao.Controls.Add(dtInfoHrEntrada);
@@ -131,103 +236,24 @@
             gpb_Movimentacao.TabStop = false;
             gpb_Movimentacao.Text = "Movimentações";
             // 
-            // panel2
+            // dtInfoHrEntrada
             // 
-            panel2.Controls.Add(btnCancelar);
-            panel2.Controls.Add(btnRegistrarEntrada);
-            panel2.Dock = DockStyle.Bottom;
-            panel2.Location = new Point(0, 574);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(1050, 77);
-            panel2.TabIndex = 4;
+            dtInfoHrEntrada.CustomFormat = "HH:mm";
+            dtInfoHrEntrada.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dtInfoHrEntrada.Format = DateTimePickerFormat.Custom;
+            dtInfoHrEntrada.Location = new Point(238, 118);
+            dtInfoHrEntrada.Name = "dtInfoHrEntrada";
+            dtInfoHrEntrada.Size = new Size(224, 29);
+            dtInfoHrEntrada.TabIndex = 5;
             // 
-            // mskPlacaveiculo
+            // dtInfoDtEntrada
             // 
-            mskPlacaveiculo.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            mskPlacaveiculo.Location = new Point(230, 55);
-            mskPlacaveiculo.Name = "mskPlacaveiculo";
-            mskPlacaveiculo.Size = new Size(187, 29);
-            mskPlacaveiculo.TabIndex = 1;
-            // 
-            // btnBuscarPorPlaca
-            // 
-            btnBuscarPorPlaca.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnBuscarPorPlaca.ForeColor = Color.Black;
-            btnBuscarPorPlaca.Location = new Point(441, 51);
-            btnBuscarPorPlaca.Name = "btnBuscarPorPlaca";
-            btnBuscarPorPlaca.Size = new Size(170, 33);
-            btnBuscarPorPlaca.TabIndex = 2;
-            btnBuscarPorPlaca.Text = "Buscar por Placa";
-            btnBuscarPorPlaca.UseVisualStyleBackColor = true;
-            // 
-            // lblCliente
-            // 
-            lblCliente.AutoSize = true;
-            lblCliente.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblCliente.ForeColor = Color.Black;
-            lblCliente.Location = new Point(57, 45);
-            lblCliente.Name = "lblCliente";
-            lblCliente.Size = new Size(74, 22);
-            lblCliente.TabIndex = 0;
-            lblCliente.Text = "Cliente:";
-            // 
-            // lblCorModelo
-            // 
-            lblCorModelo.AutoSize = true;
-            lblCorModelo.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblCorModelo.ForeColor = Color.Black;
-            lblCorModelo.Location = new Point(57, 85);
-            lblCorModelo.Name = "lblCorModelo";
-            lblCorModelo.Size = new Size(124, 22);
-            lblCorModelo.TabIndex = 2;
-            lblCorModelo.Text = "Cor / Modelo:";
-            // 
-            // txtNomeCliente
-            // 
-            txtNomeCliente.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtNomeCliente.Location = new Point(187, 42);
-            txtNomeCliente.Name = "txtNomeCliente";
-            txtNomeCliente.Size = new Size(213, 29);
-            txtNomeCliente.TabIndex = 3;
-            // 
-            // textBox2
-            // 
-            textBox2.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(187, 82);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(213, 29);
-            textBox2.TabIndex = 4;
-            // 
-            // lblVagaSelecionada
-            // 
-            lblVagaSelecionada.AutoSize = true;
-            lblVagaSelecionada.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblVagaSelecionada.ForeColor = Color.Black;
-            lblVagaSelecionada.Location = new Point(26, 45);
-            lblVagaSelecionada.Name = "lblVagaSelecionada";
-            lblVagaSelecionada.Size = new Size(168, 22);
-            lblVagaSelecionada.TabIndex = 0;
-            lblVagaSelecionada.Text = "Vaga Selecionada:";
-            // 
-            // lblDataEntrada
-            // 
-            lblDataEntrada.AutoSize = true;
-            lblDataEntrada.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblDataEntrada.ForeColor = Color.Black;
-            lblDataEntrada.Location = new Point(26, 86);
-            lblDataEntrada.Name = "lblDataEntrada";
-            lblDataEntrada.Size = new Size(151, 22);
-            lblDataEntrada.TabIndex = 1;
-            lblDataEntrada.Text = "Data de Entrada:";
-            // 
-            // txtVagaSelecionada
-            // 
-            txtVagaSelecionada.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtVagaSelecionada.ForeColor = Color.Black;
-            txtVagaSelecionada.Location = new Point(238, 41);
-            txtVagaSelecionada.Name = "txtVagaSelecionada";
-            txtVagaSelecionada.Size = new Size(224, 29);
-            txtVagaSelecionada.TabIndex = 2;
+            dtInfoDtEntrada.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dtInfoDtEntrada.Format = DateTimePickerFormat.Short;
+            dtInfoDtEntrada.Location = new Point(238, 80);
+            dtInfoDtEntrada.Name = "dtInfoDtEntrada";
+            dtInfoDtEntrada.Size = new Size(224, 29);
+            dtInfoDtEntrada.TabIndex = 4;
             // 
             // lblHoraEntrada
             // 
@@ -240,85 +266,80 @@
             lblHoraEntrada.TabIndex = 3;
             lblHoraEntrada.Text = "Hora de Entrada:";
             // 
-            // dtInfoDtEntrada
+            // txtVagaSelecionada
             // 
-            dtInfoDtEntrada.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dtInfoDtEntrada.Format = DateTimePickerFormat.Short;
-            dtInfoDtEntrada.Location = new Point(238, 80);
-            dtInfoDtEntrada.Name = "dtInfoDtEntrada";
-            dtInfoDtEntrada.Size = new Size(224, 29);
-            dtInfoDtEntrada.TabIndex = 4;
+            txtVagaSelecionada.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtVagaSelecionada.ForeColor = Color.Black;
+            txtVagaSelecionada.Location = new Point(238, 41);
+            txtVagaSelecionada.Name = "txtVagaSelecionada";
+            txtVagaSelecionada.Size = new Size(224, 29);
+            txtVagaSelecionada.TabIndex = 2;
             // 
-            // dtInfoHrEntrada
+            // lblDataEntrada
             // 
-            dtInfoHrEntrada.CustomFormat = "HH:mm";
-            dtInfoHrEntrada.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dtInfoHrEntrada.Format = DateTimePickerFormat.Custom;
-            dtInfoHrEntrada.Location = new Point(238, 118);
-            dtInfoHrEntrada.Name = "dtInfoHrEntrada";
-            dtInfoHrEntrada.Size = new Size(224, 29);
-            dtInfoHrEntrada.TabIndex = 5;
+            lblDataEntrada.AutoSize = true;
+            lblDataEntrada.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblDataEntrada.ForeColor = Color.Black;
+            lblDataEntrada.Location = new Point(26, 86);
+            lblDataEntrada.Name = "lblDataEntrada";
+            lblDataEntrada.Size = new Size(151, 22);
+            lblDataEntrada.TabIndex = 1;
+            lblDataEntrada.Text = "Data de Entrada:";
             // 
-            // btnRegistrarEntrada
+            // lblVagaSelecionada
             // 
-            btnRegistrarEntrada.Location = new Point(774, 24);
-            btnRegistrarEntrada.Name = "btnRegistrarEntrada";
-            btnRegistrarEntrada.Size = new Size(141, 32);
-            btnRegistrarEntrada.TabIndex = 0;
-            btnRegistrarEntrada.Text = "Registrar Entrada";
-            btnRegistrarEntrada.UseVisualStyleBackColor = true;
+            lblVagaSelecionada.AutoSize = true;
+            lblVagaSelecionada.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblVagaSelecionada.ForeColor = Color.Black;
+            lblVagaSelecionada.Location = new Point(26, 45);
+            lblVagaSelecionada.Name = "lblVagaSelecionada";
+            lblVagaSelecionada.Size = new Size(168, 22);
+            lblVagaSelecionada.TabIndex = 0;
+            lblVagaSelecionada.Text = "Vaga Selecionada:";
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(btnCancelar);
+            panel2.Controls.Add(btnRegistrarEntrada);
+            panel2.Dock = DockStyle.Bottom;
+            panel2.Location = new Point(0, 574);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1050, 77);
+            panel2.TabIndex = 4;
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(921, 24);
+            btnCancelar.BackColor = Color.FromArgb(218, 218, 218);
+            btnCancelar.FlatAppearance.BorderColor = Color.Silver;
+            btnCancelar.FlatStyle = FlatStyle.Flat;
+            btnCancelar.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnCancelar.ForeColor = Color.Black;
+            btnCancelar.Image = Properties.Resources.iconClose;
+            btnCancelar.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCancelar.Location = new Point(914, 33);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(105, 32);
+            btnCancelar.Size = new Size(124, 32);
             btnCancelar.TabIndex = 1;
             btnCancelar.Text = "Cancelar";
-            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.TextAlign = ContentAlignment.MiddleRight;
+            btnCancelar.UseVisualStyleBackColor = false;
             // 
-            // picLogo
+            // btnRegistrarEntrada
             // 
-            picLogo.BackColor = Color.White;
-            picLogo.Location = new Point(36, 12);
-            picLogo.Name = "picLogo";
-            picLogo.Size = new Size(100, 69);
-            picLogo.TabIndex = 0;
-            picLogo.TabStop = false;
-            // 
-            // lblTitulo
-            // 
-            lblTitulo.AutoSize = true;
-            lblTitulo.BackColor = Color.Transparent;
-            lblTitulo.Font = new Font("Arial", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitulo.ForeColor = Color.White;
-            lblTitulo.Location = new Point(146, 19);
-            lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(268, 56);
-            lblTitulo.TabIndex = 1;
-            lblTitulo.Text = "UrbanPark";
-            // 
-            // lblSubtitulo
-            // 
-            lblSubtitulo.AutoSize = true;
-            lblSubtitulo.Font = new Font("Arial Narrow", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblSubtitulo.ForeColor = Color.White;
-            lblSubtitulo.Location = new Point(455, 19);
-            lblSubtitulo.Name = "lblSubtitulo";
-            lblSubtitulo.Size = new Size(215, 33);
-            lblSubtitulo.TabIndex = 2;
-            lblSubtitulo.Text = "Registrar Entrada";
-            // 
-            // lbl_Subtitulo2
-            // 
-            lbl_Subtitulo2.AutoSize = true;
-            lbl_Subtitulo2.Font = new Font("Arial", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbl_Subtitulo2.ForeColor = Color.White;
-            lbl_Subtitulo2.Location = new Point(455, 57);
-            lbl_Subtitulo2.Name = "lbl_Subtitulo2";
-            lbl_Subtitulo2.Size = new Size(322, 24);
-            lbl_Subtitulo2.TabIndex = 3;
-            lbl_Subtitulo2.Text = "Inicia a movimentação do veículo";
+            btnRegistrarEntrada.BackColor = Color.FromArgb(39, 133, 43);
+            btnRegistrarEntrada.FlatAppearance.BorderColor = Color.FromArgb(192, 255, 192);
+            btnRegistrarEntrada.FlatStyle = FlatStyle.Flat;
+            btnRegistrarEntrada.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnRegistrarEntrada.ForeColor = Color.White;
+            btnRegistrarEntrada.Image = Properties.Resources.iconCheck;
+            btnRegistrarEntrada.ImageAlign = ContentAlignment.MiddleLeft;
+            btnRegistrarEntrada.Location = new Point(706, 33);
+            btnRegistrarEntrada.Name = "btnRegistrarEntrada";
+            btnRegistrarEntrada.Size = new Size(193, 32);
+            btnRegistrarEntrada.TabIndex = 0;
+            btnRegistrarEntrada.Text = "Registrar Entrada";
+            btnRegistrarEntrada.TextAlign = ContentAlignment.MiddleRight;
+            btnRegistrarEntrada.UseVisualStyleBackColor = false;
             // 
             // frm_RegistrarEntrada
             // 
@@ -333,9 +354,12 @@
             Font = new Font("Arial Narrow", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(3, 5, 3, 5);
             Name = "frm_RegistrarEntrada";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "frm_RegistrarEntrada";
+            Load += frm_RegistrarEntrada_Load;
             pnlCabecalho.ResumeLayout(false);
             pnlCabecalho.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)picLogo).EndInit();
             grpBuscarVeiculo.ResumeLayout(false);
             grpBuscarVeiculo.PerformLayout();
             grpDadosVeiculo.ResumeLayout(false);
@@ -343,7 +367,6 @@
             gpb_Movimentacao.ResumeLayout(false);
             gpb_Movimentacao.PerformLayout();
             panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)picLogo).EndInit();
             ResumeLayout(false);
         }
 

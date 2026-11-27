@@ -56,7 +56,16 @@ namespace frm_parking_control
         {
             ctr_StatusVagas cardSelecionado = (ctr_StatusVagas)sender;
 
-            MessageBox.Show($"- Vaga: {cardSelecionado.NumVaga} \n- Tipo: {cardSelecionado.TipoVaga} \n- Status: {cardSelecionado.StatusVaga}");
+            if(cardSelecionado.StatusVaga == EStatusVagas.Livre)
+            {
+                frm_RegistrarEntrada frmRegistrarEntrada = new frm_RegistrarEntrada();
+                frmRegistrarEntrada.ShowDialog();
+            }
+            else
+            {
+                frm_RegistrarSaida frmRegistrarSaida = new frm_RegistrarSaida();
+                frmRegistrarSaida.ShowDialog();
+            }
         }
     }
 }
