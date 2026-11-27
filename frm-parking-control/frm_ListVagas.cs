@@ -58,7 +58,7 @@ namespace frm_parking_control
 
             if(cardSelecionado.StatusVaga == EStatusVagas.Livre)
             {
-                frm_RegistrarEntrada frmRegistrarEntrada = new frm_RegistrarEntrada();
+                frm_RegistrarEntrada frmRegistrarEntrada = new frm_RegistrarEntrada(cardSelecionado.NumVaga, cardSelecionado.IdVaga);
                 frmRegistrarEntrada.ShowDialog();
             }
             else
