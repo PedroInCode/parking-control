@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_RegistrarSaida));
             pnlCabecalho = new Panel();
             lbl_Subtitulo2 = new Label();
             lblSubtitulo = new Label();
@@ -185,11 +186,11 @@
             grpBuscarVeiculo.Controls.Add(lblPlacaVeiculo);
             grpBuscarVeiculo.Font = new Font("Arial", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             grpBuscarVeiculo.ForeColor = Color.FromArgb(5, 31, 71);
-            grpBuscarVeiculo.Location = new Point(17, 106);
+            grpBuscarVeiculo.Location = new Point(17, 119);
             grpBuscarVeiculo.Margin = new Padding(4);
             grpBuscarVeiculo.Name = "grpBuscarVeiculo";
             grpBuscarVeiculo.Padding = new Padding(4);
-            grpBuscarVeiculo.Size = new Size(1016, 111);
+            grpBuscarVeiculo.Size = new Size(1016, 98);
             grpBuscarVeiculo.TabIndex = 2;
             grpBuscarVeiculo.TabStop = false;
             grpBuscarVeiculo.Text = "Buscar Veículo";
@@ -201,7 +202,7 @@
             btnBuscarPorPlaca.FlatStyle = FlatStyle.Flat;
             btnBuscarPorPlaca.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnBuscarPorPlaca.ForeColor = Color.White;
-            btnBuscarPorPlaca.Location = new Point(319, 53);
+            btnBuscarPorPlaca.Location = new Point(317, 39);
             btnBuscarPorPlaca.Margin = new Padding(4);
             btnBuscarPorPlaca.Name = "btnBuscarPorPlaca";
             btnBuscarPorPlaca.Size = new Size(196, 31);
@@ -213,7 +214,7 @@
             // mskPlacaveiculo
             // 
             mskPlacaveiculo.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            mskPlacaveiculo.Location = new Point(211, 54);
+            mskPlacaveiculo.Location = new Point(209, 40);
             mskPlacaveiculo.Margin = new Padding(4);
             mskPlacaveiculo.Mask = "AAA-0000";
             mskPlacaveiculo.Name = "mskPlacaveiculo";
@@ -225,7 +226,7 @@
             lblPlacaVeiculo.AutoSize = true;
             lblPlacaVeiculo.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblPlacaVeiculo.ForeColor = Color.Black;
-            lblPlacaVeiculo.Location = new Point(45, 57);
+            lblPlacaVeiculo.Location = new Point(43, 43);
             lblPlacaVeiculo.Margin = new Padding(4, 0, 4, 0);
             lblPlacaVeiculo.Name = "lblPlacaVeiculo";
             lblPlacaVeiculo.Size = new Size(158, 22);
@@ -519,10 +520,11 @@
             Controls.Add(panel2);
             Controls.Add(pnlCabecalho);
             Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4);
             Name = "frm_RegistrarSaida";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "frm_RegistrarSaida";
+            Text = "UrbanPark | Registrar Saída";
             Load += frm_RegistrarSaida_Load;
             pnlCabecalho.ResumeLayout(false);
             pnlCabecalho.PerformLayout();

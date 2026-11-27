@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_ListVagas));
             flw_CardVagas = new FlowLayoutPanel();
             SuspendLayout();
             // 
@@ -36,18 +37,19 @@
             flw_CardVagas.Dock = DockStyle.Fill;
             flw_CardVagas.Location = new Point(0, 0);
             flw_CardVagas.Name = "flw_CardVagas";
-            flw_CardVagas.Size = new Size(1050, 651);
+            flw_CardVagas.Size = new Size(936, 651);
             flw_CardVagas.TabIndex = 0;
             // 
             // frm_ListVagas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1050, 651);
+            ClientSize = new Size(936, 651);
             Controls.Add(flw_CardVagas);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frm_ListVagas";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "frm_ListVagas";
+            Text = "UrbanPark | Controle de Vagas";
             Load += frm_ListVagas_Load;
             ResumeLayout(false);
         }

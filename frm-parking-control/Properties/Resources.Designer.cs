@@ -111,6 +111,16 @@ namespace frm_parking_control.Properties {
         }
         
         /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Byte[].
+        /// </summary>
+        internal static byte[] icoParkForms {
+            get {
+                object obj = ResourceManager.GetObject("icoParkForms", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap icoPesquisa {

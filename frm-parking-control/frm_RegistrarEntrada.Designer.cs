@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_RegistrarEntrada));
             pnlCabecalho = new Panel();
             lbl_Subtitulo2 = new Label();
             lblSubtitulo = new Label();
@@ -352,10 +353,11 @@
             Controls.Add(grpBuscarVeiculo);
             Controls.Add(pnlCabecalho);
             Font = new Font("Arial Narrow", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 5, 3, 5);
             Name = "frm_RegistrarEntrada";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "frm_RegistrarEntrada";
+            Text = "UrbanPark | Registrar Entrada";
             Load += frm_RegistrarEntrada_Load;
             pnlCabecalho.ResumeLayout(false);
             pnlCabecalho.PerformLayout();

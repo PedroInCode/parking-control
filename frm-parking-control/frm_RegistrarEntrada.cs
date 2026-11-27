@@ -18,7 +18,7 @@ namespace frm_parking_control
 
         private void frm_RegistrarEntrada_Load(object sender, EventArgs e)
         {
-            
+            this.txtVagaSelecionada.Text = numVaga.ToString();
         }
 
 
