@@ -39,7 +39,7 @@
             mskPlacaveiculo = new MaskedTextBox();
             lblPlacaVeiculo = new Label();
             grpDadosVeiculo = new GroupBox();
-            textBox2 = new TextBox();
+            txtCorModelo = new TextBox();
             txtNomeCliente = new TextBox();
             lblCorModelo = new Label();
             lblCliente = new Label();
@@ -152,7 +152,7 @@
             // 
             mskPlacaveiculo.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             mskPlacaveiculo.Location = new Point(230, 55);
-            mskPlacaveiculo.Mask = "AAC-0000";
+            mskPlacaveiculo.Mask = "AAAAAAA";
             mskPlacaveiculo.Name = "mskPlacaveiculo";
             mskPlacaveiculo.Size = new Size(103, 29);
             mskPlacaveiculo.TabIndex = 1;
@@ -170,7 +170,7 @@
             // 
             // grpDadosVeiculo
             // 
-            grpDadosVeiculo.Controls.Add(textBox2);
+            grpDadosVeiculo.Controls.Add(txtCorModelo);
             grpDadosVeiculo.Controls.Add(txtNomeCliente);
             grpDadosVeiculo.Controls.Add(lblCorModelo);
             grpDadosVeiculo.Controls.Add(lblCliente);
@@ -183,14 +183,14 @@
             grpDadosVeiculo.TabStop = false;
             grpDadosVeiculo.Text = "Dados do Veículo";
             // 
-            // textBox2
+            // txtCorModelo
             // 
-            textBox2.BorderStyle = BorderStyle.FixedSingle;
-            textBox2.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(187, 82);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(213, 29);
-            textBox2.TabIndex = 4;
+            txtCorModelo.BorderStyle = BorderStyle.FixedSingle;
+            txtCorModelo.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtCorModelo.Location = new Point(187, 82);
+            txtCorModelo.Name = "txtCorModelo";
+            txtCorModelo.Size = new Size(213, 29);
+            txtCorModelo.TabIndex = 4;
             // 
             // txtNomeCliente
             // 
@@ -389,7 +389,7 @@
         private Label lblCliente;
         private Label lblCorModelo;
         private TextBox txtNomeCliente;
-        private TextBox textBox2;
+        private TextBox txtCorModelo;
         private Label lblVagaSelecionada;
         private Label lblDataEntrada;
         private TextBox txtVagaSelecionada;

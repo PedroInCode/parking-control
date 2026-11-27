@@ -1,3 +1,6 @@
+using back_parking_control.Data.Repository;
+using back_parking_control.Model.DTO;
+
 namespace frm_parking_control
 {
     public partial class frm_RegistrarEntrada : Form
@@ -24,7 +27,19 @@ namespace frm_parking_control
 
         private void btnBuscarPorPlaca_Click(object sender, EventArgs e)
         {
-            
+            DadosEntradaVeiculo dadosVeiculo = new();
+            dadosVeiculo = EntradaRepository.BuscarDadosPorPlaca(mskPlacaveiculo.Text)!;
+
+            if (dadosVeiculo == null)
+            {
+                MessageBox.Show("Veiculo não encontrado!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            MessageBox.Show("Veiculo encontrado!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            txtNomeCliente.Text = dadosVeiculo.NomeCliente;
+            txtCorModelo.Text = $"{dadosVeiculo.Cor} / {dadosVeiculo.Modelo}";
         }
     }
 }
