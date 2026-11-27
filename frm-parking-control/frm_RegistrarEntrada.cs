@@ -33,11 +33,17 @@ namespace frm_parking_control
             if (dadosVeiculo == null)
             {
                 MessageBox.Show("Veiculo não encontrado!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                btnRegistrarEntrada.Enabled = false;
+                mskPlacaveiculo.Clear();
+                txtNomeCliente.Clear();
+                txtCorModelo.Clear();
                 return;
             }
 
             MessageBox.Show("Veiculo encontrado!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+            btnRegistrarEntrada.Enabled = true;
             txtNomeCliente.Text = dadosVeiculo.NomeCliente;
             txtCorModelo.Text = $"{dadosVeiculo.Cor} / {dadosVeiculo.Modelo}";
         }

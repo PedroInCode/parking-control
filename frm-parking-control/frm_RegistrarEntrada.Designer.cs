@@ -332,6 +332,7 @@
             // btnRegistrarEntrada
             // 
             btnRegistrarEntrada.BackColor = Color.FromArgb(39, 133, 43);
+            btnRegistrarEntrada.Enabled = false;
             btnRegistrarEntrada.FlatAppearance.BorderColor = Color.FromArgb(192, 255, 192);
             btnRegistrarEntrada.FlatStyle = FlatStyle.Flat;
             btnRegistrarEntrada.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
