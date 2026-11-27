@@ -12,14 +12,15 @@ namespace frm_parking_control
 {
     public partial class frm_RegistrarSaida : Form
     {
+
         public frm_RegistrarSaida()
         {
             InitializeComponent();
         }
 
-        private void frm_RegistrarSaida_Load(object sender, EventArgs e)
+        private void frm_RegistrarSaida_Load(object sender, EventArgs e) 
         {
-
+            
         }
     }
 }

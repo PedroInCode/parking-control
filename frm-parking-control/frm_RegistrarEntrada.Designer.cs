@@ -146,6 +146,7 @@
             btnBuscarPorPlaca.TabIndex = 2;
             btnBuscarPorPlaca.Text = "🔍 Buscar por Placa";
             btnBuscarPorPlaca.UseVisualStyleBackColor = false;
+            btnBuscarPorPlaca.Click += btnBuscarPorPlaca_Click;
             // 
             // mskPlacaveiculo
             // 
@@ -184,6 +185,7 @@
             // 
             // textBox2
             // 
+            textBox2.BorderStyle = BorderStyle.FixedSingle;
             textBox2.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textBox2.Location = new Point(187, 82);
             textBox2.Name = "textBox2";
@@ -192,6 +194,7 @@
             // 
             // txtNomeCliente
             // 
+            txtNomeCliente.BorderStyle = BorderStyle.FixedSingle;
             txtNomeCliente.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtNomeCliente.Location = new Point(187, 42);
             txtNomeCliente.Name = "txtNomeCliente";
@@ -269,6 +272,7 @@
             // 
             // txtVagaSelecionada
             // 
+            txtVagaSelecionada.BorderStyle = BorderStyle.FixedSingle;
             txtVagaSelecionada.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtVagaSelecionada.ForeColor = Color.Black;
             txtVagaSelecionada.Location = new Point(238, 41);

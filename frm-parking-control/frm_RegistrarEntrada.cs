@@ -10,7 +10,7 @@ namespace frm_parking_control
             InitializeComponent();
         }
 
-        public frm_RegistrarEntrada(string numVaga, int idVaga) : this() 
+        public frm_RegistrarEntrada(string numVaga, int idVaga) : this()
         {
             this.numVaga = numVaga;
             this.idVaga = idVaga;
@@ -18,9 +18,13 @@ namespace frm_parking_control
 
         private void frm_RegistrarEntrada_Load(object sender, EventArgs e)
         {
-            this.txtVagaSelecionada.Text = numVaga.ToString();
+            this.txtVagaSelecionada.Text = numVaga;
+            this.txtVagaSelecionada.Enabled = false;
         }
 
-
+        private void btnBuscarPorPlaca_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
